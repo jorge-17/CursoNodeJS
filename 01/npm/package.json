@@ -1,0 +1,29 @@
+{
+  "name": "node-training",
+  "version": "0.0.0",
+  "description": "Node.js básico - intermedio",
+  "main": "index.js",
+  "homepage": "https://null.rocks/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node index.js",
+    "install-prod": "npm install --production",
+    "clean": "rm -rf node_modules && npm install --production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "author": "Ruben Rivera <rrl@live.com.mx> (https://null.rocks/)",
+  "contributors": [
+    "Name <email> (url)",
+    "Nombre Apellido <email@email.email> (http://localhost/)"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
+}
