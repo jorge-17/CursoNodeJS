@@ -1,4 +1,5 @@
 const fs = require('fs');
+const string = '\nTraining';
 
 /**
  * Leer archivo 
@@ -17,8 +18,9 @@ fs.readFile('./test.txt', (error, data) => {
      * Agregar contenido al final del contenido del archivo
      * https://nodejs.org/api/fs.html#fs_fs_appendfile_file_data_options_callback
      */
-    fs.appendFile('./test.txt', '\nTraining', (error) => {
+    fs.appendFile('./test.txt', string, (error) => {
         if (error) {
+            console.log('No se modifico el archivo');
             throw error;
         }
 
@@ -28,7 +30,7 @@ fs.readFile('./test.txt', (error, data) => {
          * Escribir archivo. Si ya existe, será reemplazado
          * https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback
          */
-        fs.writeFile('test2.txt', data, (error) => {
+        fs.writeFile('test2.txt', new Buffer(data.toString() + string), (error) => {
             // Bug
             if (error) {
                 console.log('No fue posible crear el archivo');

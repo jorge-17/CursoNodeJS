@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const TIMES = 100;
+const TIMES = 1000;
 const FILE = './test.txt'; // big-file.txt
 
 console.time('Sync');

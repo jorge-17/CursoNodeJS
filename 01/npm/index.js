@@ -1,5 +1,6 @@
 // Nótese ./ especificando al ruta
 const { padLeft, padRight } = require('./utils/pad');
+const math = require('./utils/math');
 
 // Busca en node_modules o instalaciones globales (npm install -g [...])
 const _ = require('lodash');
@@ -9,6 +10,8 @@ const { mask, unmask } = require('./utils/mascara')({ mask: [0xF7293, 0x8364], r
 
 
 // Nuestro módulo
+console.log(math.suma(3,5));
+console.log(padLeft('x', 10, '0'));
 console.log(padLeft('x', 10, '0'));
 console.log(padRight('x', 10, '0'));
 
