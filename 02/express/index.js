@@ -49,6 +49,12 @@ app.use('/', (request, response, next) => {
   next();
 });
 
+app.use('/api', (request, response, next) => {
+  response.json({
+    saludo:'hola'
+  });
+});
+
 
 // Verbo      Parámetro
 //   v           v

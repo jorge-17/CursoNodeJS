@@ -5,11 +5,8 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('express:server');
-
-var server = require('http').Server(app);
-const io = require('Socket.io')(server);
-app.set('io',io);
+var debug = require('debug')('myfolder:server');
+var http = require('http');
 
 /**
  * Get port from environment and store in Express.
@@ -17,6 +14,12 @@ app.set('io',io);
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
